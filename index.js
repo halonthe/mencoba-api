@@ -8,8 +8,9 @@ import AuthRoute from './routes/AuthRoute.js'
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-mongoose.connect('mongodb+srv://halonthe:kontolsingo@cluster0.pidfhbt.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true, useUnifiedTopology: true
 });
 const db = mongoose.connection;
@@ -22,4 +23,4 @@ app.use(AuthRoute);
 app.use(UserRoute);
 app.use(GugurRoute);
 
-app.listen(5000, () => console.log('server listening on port 5000...'))
+app.listen(PORT, () => console.log('server listening on port', PORT))
