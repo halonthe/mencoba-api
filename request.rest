@@ -1,0 +1,65 @@
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/6340fef6929592885e8c4fd6
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "nama":"Yudha",
+    "email":"halonthe@gmail.com",
+    "password":"kontolsingo"
+}
+
+###
+PATCH http://localhost:5000/users/6340fef6929592885e8c4fd6
+Content-Type: application/json
+
+{
+    "nama":"leminho",
+    "email":"halonthe@gmail.com",
+    "password":"kontolsingo"
+}
+
+###
+DELETE http://localhost:5000/users/6340fef6929592885e8c4fd6
+
+/////////////////////
+# TESTING DATA GUGUR
+////////////////////
+
+###
+GET http://localhost:5000/gugur
+
+###
+GET http://localhost:5000/gugur/6341104b8151ad6296983190
+
+###
+POST http://localhost:5000/gugur
+Content-Type: application/json
+
+{
+    "nama":"leminho",
+    "norm":123456,
+    "nosep":"ini no sep",
+    "ket":"include",
+    "tgl":"2022-12-01T17:00:00.000+00:00"
+}
+
+
+###
+PATCH http://localhost:5000/gugur/6341104b8151ad6296983190
+Content-Type: application/json
+
+{
+    "nama":"yudha cakep",
+    "norm":123456,
+    "nosep":"ini no sep",
+    "ket":"include",
+    "tgl":"2022-12-01T17:00:00.000+00:00"
+}
+
+###
+DELETE http://localhost:5000/gugur/6341104b8151ad6296983190
