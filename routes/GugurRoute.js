@@ -3,10 +3,10 @@ import { getGugurs, getGugurById, updateGugur, deleteGugur, createGugur } from '
 
 const router = express.Router();
 
-router.get('/gugur', getGugurs)
-router.get('/gugur/:id', getGugurById)
-router.post('/gugur', createGugur)
-router.patch('/gugur/:id', updateGugur)
-router.delete('/gugur/:id', deleteGugur)
+router.get('/', getGugurs)
+router.get('/:id', getGugurById)
+router.post('/', createGugur)
+router.patch('/:id', updateGugur)
+router.delete('/:id', deleteGugur)
 
 export default router;
